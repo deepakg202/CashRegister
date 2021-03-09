@@ -1,7 +1,7 @@
 {
-  "name": "pug-webpack-boilerplate",
+  "name": "cash-register",
   "version": "1.0.0",
-  "description": "webpack 5 boilerplate to generate simple static pages using pug and sass",
+  "description": "simple app to count cash",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config config/webpack.prod.js",
@@ -46,11 +46,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/deepakgupta191199/pug-webpack-boilerplate.git"
+    "url": "git+https://github.com/deepakgupta191199/CashRegister.git"
   },
   "bugs": {
-    "url": "https://github.com/deepakgupta191199/pug-webpack-boilerplate/issues"
+    "url": "https://github.com/deepakgupta191199/CashRegister/issues"
   },
-  "homepage": "https://github.com/deepakgupta191199/pug-webapack-boilerplate#readme",
+  "homepage": "https://github.com/deepakgupta191199/CashRegister#readme",
   "dependencies": {}
 }

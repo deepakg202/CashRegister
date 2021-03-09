@@ -1,23 +1,71 @@
 extends /layouts/base.pug
 
+mixin formElem(placeholder, name, id)
+  .form-group
+    label(for=name)= placeholder
+    input.form-control(type="number" id=id name=name placeholder=placeholder value=0 min=0)
+
 block title 
-  | Pug Webpack Boilerplate
-
+  | Cash Register
 block content
-  section.bg-dark#landing
-    .container.d-flex.flex-column.text-white.justify-content-center.align-items-center.h-100
-      .lead Boilerplate to generate static pages using pug and sass
-      a.btn.btn-primary.mt-4(href="/features.html") See Features
-
-  style.
-    #landing
-    {
-      height: 100vh;
-      width: 100%;
-      background-color: #eee;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+  .container
+    .display-4.py-1.text-center Cash Register
+    .row.my-4
+      .col.col-6
+        .title.text-center Register
+        .row.mt-4#register
+          .col.col-6
+            +formElem("Two Thousands", "twok")
+          .col.col-6
+            +formElem("Five Hundreds", "fiveh")
+          .col.col-6
+            +formElem("Two Hundreds", "twoh")
+          .col.col-6  
+            +formElem("One Hundreds", "oneh")
+          .col.col-6        
+            +formElem("Fiftys", "fifty")
+          .col.col-6        
+            +formElem("Twentys", "twenty")
+          .col.col-6        
+            +formElem("Tens", "ten")
+          .col.col-6        
+            +formElem("Fives", "five")
+          .col.col-6        
+            +formElem("Twos", "two")
+          .col.col-6        
+            +formElem("Ones", "one")
+        .px-4.py-4.font-weight-bold.text-center Total Cash in Register: Rs.
+          span#totalCash 0
+        .pt-5#status            
+      .col.col-md-6
+        .title.text-center Customer Currency
+        .row.mt-4.border-left#cust
+          .col.col-6
+            +formElem("Two Thousands", "twok")
+          .col.col-6
+            +formElem("Five Hundreds", "fiveh")
+          .col.col-6
+            +formElem("Two Hundreds", "twoh")
+          .col.col-6
+            +formElem("One Hundreds", "oneh")
+          .col.col-6        
+            +formElem("Fiftys", "fifty")
+          .col.col-6        
+            +formElem("Twentys", "twenty")
+          .col.col-6        
+            +formElem("Tens", "ten")
+          .col.col-6        
+            +formElem("Fives", "five")
+          .col.col-6        
+            +formElem("Twos", "two")
+          .col.col-6        
+            +formElem("Ones", "one")
+        .px-4.py-4.font-weight-bold.text-center Customer Cash: Rs. 
+          span#custCash 0
+        .pt-5.px-5
+          form#toDeduce
+            +formElem("Deduce Cash", "deduce")
+            button.btn.btn-outline-danger(type="submit") Deduce
 
 
   

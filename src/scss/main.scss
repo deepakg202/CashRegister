@@ -1,0 +1,11 @@
+@import "./framework";
+
+.heading::after {
+  content: "";
+  display: block;
+  @extend .d-block, .mx-auto;
+  border-bottom: 2px solid $primary;
+  padding-top: 12px;
+  width: 70px;
+  height: auto;
+}

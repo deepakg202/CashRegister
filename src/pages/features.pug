@@ -1,0 +1,59 @@
+extends /layouts/base.pug
+
+block title 
+  | Features - Pug Webpack Boilerplate
+
+block content
+  section.bg-dark#features
+    .container.text-white.py-4
+      h3#features- Features:-
+      ul
+        li Configurable Webpack
+        li SCSS and PostCSS
+        li Pug Template Engine
+        li
+          | Removes unused css using 
+          code purgecss
+        li
+          | Deploy to Github Pages with one command using 
+          code gh-pages
+          |  package
+      h3#instructions- Instructions:-
+      ul
+        li
+          | Clone this repo or click on 
+          code Use This Template
+        li
+          | Execute 
+          code yarn install
+        li
+          | Execute 
+          code yarn run serve
+          |  to run dev server at 
+          code localhost:8080
+      h3#commands- Commands:-
+      p
+        code yarn run serve
+        | : Runs the development server at localhost:8080
+        code yarn run build
+        | : Builds the pages in /dist
+        code yarn run deploy-gh
+        | : Builds and pushes it to 
+        code gh-pages
+        |  branch
+      h3#note- Note:-
+      ul
+        li
+          | Static Files (ie. images and other third-party js, css etc) are served directly from the 
+          code public
+          |  folder and can be used directly
+        li
+          | Customize bootstrap or use any other scss framework in 
+          code src/scss/_framework.scss
+        li
+          | To develop a new page just create a new
+          code .pug
+          |  file in 
+          code src/pages
+          |  directory and re-run the dev server. It is somewhat similar to other static site generators like nuxtjs
+        

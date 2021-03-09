@@ -1,0 +1,56 @@
+{
+  "name": "pug-webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "webpack 5 boilerplate to generate simple static pages using pug and sass",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config config/webpack.prod.js",
+    "serve": "webpack serve --config config/webpack.dev.js",
+    "deploy-gh": "yarn run build && gh-pages -d dist"
+  },
+  "author": "deepakgupta191199",
+  "browserslist": [
+    "defaults"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/eslint-parser": "^7.13.8",
+    "@babel/eslint-plugin": "^7.13.0",
+    "@babel/preset-env": "^7.13.9",
+    "@popperjs/core": "^2.9.0",
+    "autoprefixer": "^10.2.5",
+    "babel-loader": "^8.2.2",
+    "bootstrap": "^5.0.0-beta2",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.2.1",
+    "css-loader": "^5.0.0",
+    "eslint": "^7.21.0",
+    "eslint-plugin-pug": "^1.2.3",
+    "eslint-webpack-plugin": "^2.5.2",
+    "gh-pages": "^3.1.0",
+    "glob": "^7.1.6",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.1.2",
+    "postcss": "^8.2.7",
+    "postcss-loader": "^5.1.0",
+    "pug": "^3.0.0",
+    "pug-loader": "^2.4.0",
+    "purgecss-webpack-plugin": "^3.0.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.2.0",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepakgupta191199/pug-webpack-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/deepakgupta191199/pug-webpack-boilerplate/issues"
+  },
+  "homepage": "https://github.com/deepakgupta191199/pug-webapack-boilerplate#readme",
+  "dependencies": {}
+}
